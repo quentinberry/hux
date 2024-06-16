@@ -8,6 +8,7 @@ import {
 import FirstNameInput from "@/components/FirstNameInput";
 import LastNameInput from "@/components/LastNameInput";
 import { Separator } from "@/components/ui/separator";
+import BirthYear from "@/components/BornYear";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
         </CardHeader>
         <CardContent>
           <FirstNameInput />
+          <Separator className="mt-2 mb-2" />
+          <BirthYear />
           <Separator className="mt-2 mb-2" />
           <LastNameInput />
         </CardContent>

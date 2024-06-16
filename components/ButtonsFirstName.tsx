@@ -35,19 +35,21 @@ const ButtonFirstName: React.FC<ButtonAlphabetProps> = ({ setStoredName }) => {
   }
 
   return (
-    <>
+    <div className="mt-1">
       {realShuffledArray.map((letter: string, i: number) => (
         <Button
           key={i}
-          variant={"destructive"}
+          variant="ghost"
           size={"sm"}
           onClick={() => appendToName(i)}
         >
           {letter}
         </Button>
       ))}
-      <Button onClick={() => deleteFromName()}>←</Button>
-    </>
+      <Button variant="ghost" onClick={() => deleteFromName()}>
+        ←
+      </Button>
+    </div>
   );
 };
 

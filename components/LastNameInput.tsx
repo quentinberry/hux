@@ -29,6 +29,11 @@ const LastNameInput: React.FC<> = () => {
     setCarouselVisible(false);
   }
 
+  function clearInput(): void {
+    setName("");
+    setCarouselVisible(false);
+  }
+
   const handleSliderValue = (value: any) => {
     setSliderValue(value);
   };
@@ -36,13 +41,17 @@ const LastNameInput: React.FC<> = () => {
   return (
     <>
       <Label>Last Name</Label>
-      <Input
-        readOnly
-        onClick={() => lastNameButtonVisible()}
-        type="lastname"
-        placeholder="Enter Name"
-        value={name}
-      />
+      <div className="flex w-full max-w-sm items-center space-x-2">
+        <Input
+          readOnly
+          onClick={() => lastNameButtonVisible()}
+          type="lastname"
+          placeholder="Enter Name"
+          value={name}
+          className="mt-1"
+        />
+        <Button onClick={() => clearInput()}>←</Button>
+      </div>
       {carouselVisible && (
         <>
           <Slider

@@ -22,6 +22,7 @@ const FirstNameInput: React.FC<any> = () => {
         type="firstname"
         placeholder="Enter Name"
         value={storedName}
+        className="mt-1"
       />
       {buttonVisible && <ButtonFirstName setStoredName={setStoredName} />}
     </>
