@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { alphabet } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { Slider } from "./ui/slider";
 
-const LastNameInput: React.FC<> = () => {
+const LastNameInput: React.FC<any> = () => {
   const [name, setName] = useState<string>("");
   const [carouselVisible, setCarouselVisible] = useState<boolean>(false);
   const [sliderValue, setSliderValue] = useState<number>(0);
