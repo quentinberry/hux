@@ -2,13 +2,6 @@
 import { useEffect, useState } from "react";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
 import { alphabet } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { Slider } from "./ui/slider";
@@ -16,7 +9,7 @@ import { Slider } from "./ui/slider";
 const LastNameInput: React.FC<> = () => {
   const [name, setName] = useState<string>("");
   const [carouselVisible, setCarouselVisible] = useState<boolean>(false);
-  const [sliderValue, setSliderValue] = useState<number>();
+  const [sliderValue, setSliderValue] = useState<number>(0);
   const [inverted, setInverted] = useState<boolean>(false);
 
   const lastNameButtonVisible = () => {
