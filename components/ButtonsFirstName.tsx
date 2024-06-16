@@ -1,14 +1,13 @@
 "use client";
-import React, { Suspense, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import Loading from "@/app/loading";
 import { alphabet } from "@/lib/utils";
 
 interface ButtonAlphabetProps {
   setStoredName: (name: string) => void;
 }
 
-const ButtonAlphabet: React.FC<ButtonAlphabetProps> = ({ setStoredName }) => {
+const ButtonFirstName: React.FC<ButtonAlphabetProps> = ({ setStoredName }) => {
   const [name, setName] = useState<string>("");
   const [realShuffledArray, setRealShuffledArray] = useState<string[]>([]);
 
@@ -52,4 +51,4 @@ const ButtonAlphabet: React.FC<ButtonAlphabetProps> = ({ setStoredName }) => {
   );
 };
 
-export default ButtonAlphabet;
+export default ButtonFirstName;
