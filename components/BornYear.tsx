@@ -14,11 +14,11 @@ const BirthYear: React.FC<any> = () => {
   };
 
   const generateAboveYear = () => {
-    setYear(Math.floor(Math.random() * (2025 - year) + year));
+    setYear(Math.floor(Math.random() * (2025 - (year ?? 1900)) + (year ?? 1900)));
   };
 
   const generateBelowYear = () => {
-    setYear(Math.floor(Math.random() * (year - 1900) + 1900));
+    setYear(Math.floor(Math.random() * ((year ?? 2025) - 1900) + 1900));
   };
 
   return (
